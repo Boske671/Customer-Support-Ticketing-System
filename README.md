@@ -1,34 +1,35 @@
-# 📞 Customer Support Ticketing System
+# 📞 Sustav za Upravljanje Korisničkom Podrškom (Customer Support Ticketing System)
 
-Java aplikacija za upravljanje korisničkom podrškom i tiketima.
+Java aplikacija za praćenje korisničkih zahtjeva i tiketa kroz poslovni radni tok.
 
 ---
 
 ## 📝 Opis
 
-Ovaj sistem omogućava praćenje korisničkih zahteva kroz poslovni workflow. Pruža podršku za više agenata, prioritizaciju problema i evidenciju korisničke komunikacije.
+Ovaj sustav omogućuje upravljanje korisničkim upitima, dodjelu prioriteta te automatsko raspoređivanje tiketa agentima podrške. Namijenjen je organizacijama koje žele bolju kontrolu nad korisničkom podrškom.
 
 ---
 
 ## 🔧 Funkcionalnosti
 
 - ✅ Slanje i upravljanje korisničkim tiketima
-- 📊 Praćenje statusa i prioriteta
-- 👥 Upravljanje timom za podršku
-- ⚙️ Automatsko dodeljivanje tiketa pomoću niti (threads)
-- 🧾 Evidencija korisničkih profila i rešenja
+- 📊 Praćenje statusa tiketa (otvoren, u radu, riješen)
+- 🚨 Postavljanje razina prioriteta
+- 👥 Upravljanje timom podrške
+- ⚙️ Automatska dodjela tiketa agentima putem niti (threads)
+- 🧾 Baza korisničkih profila i zapisa rješenja
 
 ---
 
 ## 🗄️ Baza podataka
 
-Aplikacija koristi **H2 bazu podataka**, koju je neophodno pokrenuti pre pokretanja aplikacije.
+Aplikacija koristi **H2 bazu podataka**, koju je potrebno pokrenuti prije pokretanja same aplikacije.
 
-**Detalji baze:**
+**Podaci za pristup bazi:**
 
-- **Ime baze:** `proba`
+- **Naziv baze:** `proba`
 - **Lokacija:** `baza_stvari/`
-- **Konekcioni podaci (nalaze se u `database.properties`):**
+- **Postavke za spajanje (nalaze se u `database.properties`):**
 
 ```properties
 databaseUrl=jdbc:h2:tcp://localhost/~/proba

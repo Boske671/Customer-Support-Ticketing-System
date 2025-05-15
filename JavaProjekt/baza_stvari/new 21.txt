@@ -1,0 +1,43 @@
+jdbc:h2:file:./database/baza
+
+INSERT INTO agent (FIRSTNAME, LASTNAME, EMAIL, AGENTTYPE) 
+VALUES 
+('a', 'a', 'a@a.com', 'SUPERAGENT');
+
+CREATE TABLE Customer (
+    id BIGINT PRIMARY KEY AUTO_INCREMENT,
+    firstName VARCHAR(30) NOT NULL,
+    lastName VARCHAR(30) NOT NULL, 
+    email VARCHAR(50) NOT NULL UNIQUE
+);
+
+
+CREATE TABLE Agent (
+    id BIGINT  PRIMARY KEY AUTO_INCREMENT,  
+    firstName VARCHAR(30) NOT NULL,
+    lastName VARCHAR(30) NOT NULL, 
+    email VARCHAR(50) NOT NULL UNIQUE,
+	agenttype ENUM('AGENT', 'SUPERAGENT')
+);
+
+CREATE TABLE Ticket (
+    ticket_id BIGINT PRIMARY KEY AUTO_INCREMENT, 
+    customer_id BIGINT NOT NULL,                 
+    agent_id BIGINT,     
+    summary VARCHAR(50) NOT NULL,    
+    description VARCHAR(300) NOT NULL,          
+    status ENUM('OPEN', 'IN_PROGRESS', 'CLOSED') DEFAULT 'OPEN', 
+	priority ENUM('LOW', 'NORMAL', 'HIGH') DEFAULT 'NORMAL', 
+    created_at DATETIME, 
+    resolved_at DATETIME, 
+    FOREIGN KEY (customer_id) REFERENCES Customer(id) ON DELETE CASCADE,
+    FOREIGN KEY (agent_id) REFERENCES Agent(id) ON DELETE SET NULL
+);
+
+DROP TABLE Customer;
+DROP TABLE Agent;
+DROP TABLE Ticket;
+
+databaseUrl = jdbc:h2:tcp://localhost/~/proba
+username = fran
+password = fran

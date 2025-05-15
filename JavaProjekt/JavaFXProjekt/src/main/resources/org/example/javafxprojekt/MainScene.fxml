@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.javafxprojekt.controllers.scene_controllers.SceneController">
+   <top>
+      <MenuBar fx:id="menuBar" BorderPane.alignment="CENTER">
+         <menus>
+            <Menu mnemonicParsing="false" text="Home">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#homePageItemAction" text="Home page" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Tickets">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#newTicketMenuItemAction" text="New ticket" />
+                  <MenuItem mnemonicParsing="false" onAction="#allTicketsItemAction" text="All tickets" />
+               </items></Menu>
+            <Menu mnemonicParsing="false" text="Agents">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#newAgentItemAction" text="New agent" />
+                  <MenuItem mnemonicParsing="false" onAction="#allAgentsItemAction" text="All agents" />
+               </items></Menu>
+            <Menu mnemonicParsing="false" text="Customers">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#customersMenuItemAction" text="View customers" />
+               </items></Menu>
+            <Menu mnemonicParsing="false" text="Resolution Log">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#resolutionLogMenuItemAction" text="View logs" />
+               </items></Menu>
+            <Menu mnemonicParsing="false" text="Changes">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#madeChangesItemAction" text="View changes" />
+              </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="747.0" prefWidth="1024.0">
+         <children>
+            <Label text="LOGGED IN AS: ">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label />
+            <Label fx:id="agentTypeLabel" text="Agent type:">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+            </Label>
+            <Label />
+            <Label fx:id="firstNameLabel" text="First name:">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+            </Label>
+            <Label />
+            <Label fx:id="lastNameLabel" text="Last name:">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+            </Label>
+            <Label />
+            <Label fx:id="eMailLabel" text="E-mail:">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

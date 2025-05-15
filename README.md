@@ -35,6 +35,7 @@ Aplikacija koristi **H2 bazu podataka**, koju je potrebno pokrenuti prije pokret
 databaseUrl=jdbc:h2:tcp://localhost/~/proba
 username=fran
 password=fran
+```
 
 
 

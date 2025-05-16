@@ -20,6 +20,24 @@ Ovaj sustav omogućuje upravljanje korisničkim upitima, dodjelu prioriteta te a
 - 🧾 Baza korisničkih profila i zapisa rješenja
 
 ---
+## 🖼️ Screenshotovi (Neke od funkcionalnosti aplikacije)
+
+### Stvaranje ticketa
+![Ticket submission](screenshots/newTicketScreen.png)
+
+### Agent home screen
+![Agent home screen](screenshots/agentHomeScreen.png)
+
+### Ticket details
+![Ticket details](screenshots/ticketDetails.png)
+
+### All tickets
+![Tickets](screenshots/ticketsScreen.png)
+
+### All agents
+![All agents](screenshots/agentsScreen.png)
+
+---
 
 ## 🗄️ Baza podataka
 
